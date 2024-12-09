@@ -1,7 +1,4 @@
 "use client";
-
-import { AdminContext } from "@/Context/AdminProvider";
-import { useContext } from "react";
 import { Bar } from "react-chartjs-2";
 import { Chart } from "chart.js";
 import { FaUser } from "react-icons/fa6";
@@ -18,8 +15,6 @@ import {
 Chart.register(LinearScale, CategoryScale, BarElement, Title, Tooltip, Legend);
 
 const Dashboard = () => {
-  const { totalUser, totalProduct } = useContext(AdminContext);
-
   const data = {
     labels: ["Users", "Products"],
     datasets: [
